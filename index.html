@@ -162,7 +162,7 @@
               <p class="text-gray-600 leading-relaxed">Saya percaya bahwa solusi digital terbaik lahir dari kode yang bersih, desain minimal, dan performa tinggi. Siap belajar hal baru dan bekerja sama dalam tim maupun individu.</p>
               <div class="flex gap-4 mt-8">
                 <a href="#contact" class="btn-primary">Mulai Proyek</a>
-                <a href="#" id="downloadCvBtn" class="btn-outline flex items-center gap-2"><i class="fa-regular fa-file-pdf text-red-500"></i> Download CV</a>
+                
               </div>
             </div>
             <div>
@@ -311,27 +311,9 @@
     </main>
   </div>
 
-  <!-- Toast -->
-  <div id="toastMsg" class="toast"><i class="fa-regular fa-circle-check text-green-400"></i><span id="toastText">Download CV dimulai!</span></div>
-
+  
   <script>
-    // Download CV
-    const downloadBtn = document.getElementById('downloadCvBtn');
-    if (downloadBtn) {
-      downloadBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const link = document.createElement('a');
-        link.href = 'cv.pdf';
-        link.download = 'cv_fauzan_abdul.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        showToast("📄 Download CV dimulai!", false);
-      });
-    }
-
     document.getElementById('year').innerText = new Date().getFullYear();
-
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
